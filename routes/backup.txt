@@ -1,0 +1,62 @@
+
+
+
+var redisClient = redis.createClient();
+
+redisClient.on('connect', function () {
+  console.log('connected');
+});
+redisClient.on('error', function (err) {
+  console.log('Something went wrong ' + err);
+});
+
+
+/*router.use((req, res, next) => {
+  var keyName = 'sabarish'
+  redisClient.get(keyName, (err, redRes) => {
+    if (err)
+      res.send(err);
+    else if (redRes == null) {
+      next()
+    } else {
+      console.log('redis middleware');
+      console.log(redRes);
+      res.send(redRes)
+    }
+  })
+})*/
+
+/*--------------login With Redis---*/
+
+/*
+router.post('/login', (req, res) => {
+  let logInId = req.body.userId;
+  let password = req.body.password;
+  console.log('hi');
+  // let logInId = 'sabrarish135274@gmail.com';
+  // let password = 'R@ptor2345';
+  /*redisClient.get(logInId, (err, redRes) => {
+    if (err)
+      res.send(err);
+    else if (redRes == null) {*/
+/*usersController.userLogIn(logInId, password, (err, data) => {
+  if (err) {
+    console.log(err)
+    res.send(err)
+  } else {*/
+/*redisClient.set(logInId, JSON.stringify(data), (err, redRes) => {
+  if (err)
+    res.send(err)
+  else {
+    console.log('data--' + redRes);*/
+//res.send(data);
+//}
+// }
+// })
+/*})
+} else {
+    console.log('through middleware')
+    res.send(redRes);
+  }
+});*/
+//});*/
